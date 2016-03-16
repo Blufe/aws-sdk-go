@@ -105,7 +105,7 @@ func (v2 *signer) Sign() error {
 	}
 
 	// Set new query parameters
-	v2.Query.Set("AWSAccessKeyId", credValue.AccessKeyID)
+	v2.Query.Set("AccessKeyId", credValue.AccessKeyID)
 	v2.Query.Set("SignatureVersion", signatureVersion)
 	v2.Query.Set("SignatureMethod", signatureMethod)
 	v2.Query.Set("Timestamp", v2.Time.UTC().Format(timeFormat))
